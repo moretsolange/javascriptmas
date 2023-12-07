@@ -15,7 +15,7 @@ addBtn.addEventListener("click", () => {
   inputField = inputField.trim();
 
   // checks if the inputfield is not empty, nor the array contains an already pushed input
-  if (!inputField && !wishlist.includes(inputField)) {
+  if (inputField && !wishlist.includes(inputField)) {
     wishlist.push(inputField);
     displayItems();
   }
