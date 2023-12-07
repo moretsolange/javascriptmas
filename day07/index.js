@@ -12,17 +12,18 @@ newElement.textContent = wishlist[0];
 
 addBtn.addEventListener("click", () => {
   let inputField = document.querySelector(".addItem").value;
+  inputField = inputField.trim();
 
-  if (inputField.trim() !== "" && !wishlist.includes(inputField)) {
-    // checks if the inputfield is not empty, nor the array contains an already pushed input
+  // checks if the inputfield is not empty, nor the array contains an already pushed input
+  if (!inputField && !wishlist.includes(inputField)) {
     wishlist.push(inputField);
     displayItems();
   }
 });
 
 delBtn.addEventListener("click", () => {
+  // if there are more than 0 items in the array, we pop the last item, and re-render the UI
   if (wishlist.length > 0) {
-    // if there are more than 0 items in the array, we pop the last item, and re-render the UI
     wishlist.pop();
     displayItems();
   }
@@ -39,8 +40,3 @@ function displayItems() {
 }
 
 console.log(wishlist);
-/** Challenge:
-  - Iterate over the wishlist array.
-  - Dynamically render your wishlist from the array.
-  - Style the wishlist with CSS.
-**/
