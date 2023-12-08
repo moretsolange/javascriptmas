@@ -8,6 +8,40 @@ html a {
   outline: none;
 }
 
+.link-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.link-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* Change to column for vertical stacking */
+  align-items: center;
+}
+
+li {
+  padding: 10px; /* Adjust padding as needed */
+  margin-bottom: 15px; /* Adjust margin-bottom as needed */
+  border-radius: 15px; /* Corrected the border-radius property */
+  background-color: #fefae0;
+  opacity: 0.9;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  width: 250px;
+}
+
+a {
+  color: #b99470 !important;
+}
+
+a:hover {
+  color: #a9b388 !important;
+}
+
 body #image,
 html #image {
   transition: all 0.5s ease;
@@ -59,7 +93,7 @@ html .links #link-content {
 .background {
   width: 100vw;
   height: 100%;
-  background: linear-gradient(-45deg, #63808f, #496372, #879794, #507184);
+  background: linear-gradient(-45deg, #a9b388, #5f6f52, #a9b388, #5f6f52);
   background-size: 400% 400%;
   -webkit-animation: Gradient 15s ease infinite;
   -moz-animation: Gradient 15s ease infinite;
@@ -211,4 +245,9 @@ html .links #link-content {
     opacity: 0;
     border-radius: 50%;
   }
+}
+
+h1,
+p {
+  color: #fefae0;
 }
