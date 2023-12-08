@@ -1,0 +1,49 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-left: 15rem;
+}
+
+.container {
+  width: 50%;
+}
+
+.progress-bar {
+  width: 70%;
+  height: 25px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: grey;
+}
+
+.progress-status {
+  height: 100%;
+  width: 0;
+  background-color: red;
+  border-radius: 10px;
+  animation: progressAnimation 6s linear infinite;
+}
+
+@keyframes progressAnimation {
+  0% {
+    width: 0;
+  }
+  50% {
+    background-color: blue;
+  }
+  70% {
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+    background-color: green;
+  }
+}
