@@ -23,15 +23,17 @@ const sorteesArr = [
 ];
 
 function sort() {
-  (niceList.innerHTML = ""),
-    (naughtyList.innerHTML = ""),
-    sorteesArr.forEach(({ hasBeenGood, name }) => {
-      hasBeenGood
-        ? (niceList.innerHTML += `<li>${name}</li>`)
-        : (naughtyList.innerHTML += `<li>${name}</li>`);
-    });
+  niceList.innerHTML = "";
+  naughtyList.innerHTML = "";
+
+  sorteesArr.forEach(({ hasBeenGood, name }) => {
+    appendList(hasBeenGood ? niceList : naughtyList, name);
+  });
 }
 
+function appendList(list, name) {
+  list.innerHTML += `<li>${name}</li>`;
+}
 /** Challenge: 
   - Write the JavaScript to sort the people in sorteesArr into the naughty and nice lists, according to whether they have been good or not. Then display the names in the relevant place in the DOM.
 **/
