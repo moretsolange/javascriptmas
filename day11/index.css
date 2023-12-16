@@ -1,0 +1,40 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --white: #fff;
+  --red: #ff0002;
+}
+
+.flag-swiss {
+  background-color: var(--red);
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cross1 {
+  background-color: var(--white);
+  height: 56.25px;
+  width: 187.5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cross2 {
+  background-color: var(--white);
+  height: 56.25px;
+  width: 187.5px;
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  transform: rotate(90deg);
+}
