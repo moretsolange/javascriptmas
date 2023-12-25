@@ -1,0 +1,50 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --toggle-switch-bg: #232428;
+  --toggle-border: #232428;
+  --toggle-bg: #fff;
+}
+
+.toggle-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.toggle-input {
+  display: none;
+}
+
+/* Style the toggle switch container */
+.toggle-switch {
+  width: 80px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 20px;
+  border: 3px solid #232428;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Style the toggle switch handle */
+.toggle-switch::before {
+  content: "";
+  width: 32px;
+  height: 32px;
+  background-color: #232428;
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  transition: transform 0.3s ease;
+}
+
+/* Move the handle to the right when the checkbox is checked */
+.toggle-input:checked + .toggle-switch::before {
+  transform: translateX(40px);
+}

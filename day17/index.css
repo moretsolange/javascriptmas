@@ -1,0 +1,69 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-word: #5134ff;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.carousel::after {
+  content: "coding";
+  background-color: var(--bg-word);
+  padding: 1rem;
+  border-radius: 5%;
+  color: white;
+  animation: animate 3s infinite;
+  margin: 0.5rem;
+}
+
+@keyframes animate {
+  0% {
+    content: "coding";
+  }
+  20% {
+    content: "books";
+  }
+  40% {
+    content: "angel";
+  }
+  70% {
+    content: "coding";
+  }
+}
+
+/* @keyframes animate {
+  0%,
+  30% {
+    content: "coding";
+  }
+  30%,
+  40% {
+    content: "coding";
+  }
+  40%,
+  60% {
+    content: "books";
+  }
+  60%,
+  70% {
+    content: "books";
+  }
+  80%,
+  95% {
+    content: "angel";
+  }
+  95%,
+  100% {
+    content: "angel";
+  }
+} */
